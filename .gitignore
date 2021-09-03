@@ -1,3 +1,32 @@
 /vendor/
 /.phpunit.result.cache
 /.idea/
+
+###> symfony/framework-bundle ###
+src/zad3/.env.local
+src/zad3/.env.local.php
+src/zad3/.env.*.local
+src/zad3/config/secrets/prod/prod.decrypt.private.php
+src/zad3/public/bundles/
+src/zad3/var/
+src/zad3/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+src/zad3.phpunit.result.cache
+src/zad3/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> phpunit/phpunit ###
+src/zad3/phpunit.xml
+src/zad3/.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/webpack-encore-bundle ###
+src/zad3/node_modules/
+src/zad3/public/build/
+src/zad3/npm-debug.log
+src/zad3/yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+src/zad3/assets/js/secrets.js
