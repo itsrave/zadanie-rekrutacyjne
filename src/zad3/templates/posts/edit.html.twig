@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <form id="post-edit-form">
+        </form>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('posts_edit') }}
+{% endblock %}

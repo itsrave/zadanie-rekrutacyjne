@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% use 'users/_user_search.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+    {{ block('search') }}
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">email</th>
+                <th scope="col">gender</th>
+                <th scope="col">status</th>
+            </tr>
+            </thead>
+            <tbody id="users-table">
+            </tbody>
+        </table>
+        <nav>
+            <ul id="pagination" class="pagination">
+            </ul>
+        </nav>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('users') }}
+{% endblock %}
