@@ -4,7 +4,25 @@
 
 {% block body %}
     <div class="container-fluid">
+        <template id="post-edit-form-template">
+            <div class="mb-3">
+                <label class="form-label" data-template="id">Id: ${data.id}</label>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" data-template="user-id">User id: ${data.user_id}</label>
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" data-template="title">
+            </div>
+            <div class="mb-3">
+                <label for="post-body" class="form-label">Body</label>
+                <textarea class="form-control" rows="6" id="post-body" data-template="body"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </template>
         <form id="post-edit-form">
+
         </form>
     </div>
 {% endblock %}

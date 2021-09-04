@@ -3,6 +3,16 @@
 {% block title %}Posts{% endblock %}
 
 {% block body %}
+    <template id="card-post-template">
+        <div class="card col">
+            <div class="card-body">
+                <h5 class="card-title" data-template="title"></h5>
+                <h6 class="card-subtitle mb-2 text-muted" data-template="ids"></h6>
+                <p class="card-text" data-template="body"></p>
+                <a class="card-link" data-template="edit-button">Edit</a>
+            </div>
+        </div>
+    </template>
     <div class="container-fluid">
         <div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
         </div>

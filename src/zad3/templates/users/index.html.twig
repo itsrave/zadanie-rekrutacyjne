@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 {% use 'users/_user_search.html.twig' %}
+{% use 'pagination/_pagination.html.twig' %}
 
 {% block title %}Users{% endblock %}
 
@@ -16,13 +17,19 @@
                 <th scope="col">status</th>
             </tr>
             </thead>
+            <template id="user-row-template">
+                <tr>
+                    <th scope="row" data-template="id"></th>
+                    <td data-template="name"></td>
+                    <td data-template="email"></td>
+                    <td data-template="gender"></td>
+                    <td data-template="status"></td>
+                </tr>
+            </template>
             <tbody id="users-table">
             </tbody>
         </table>
-        <nav>
-            <ul id="pagination" class="pagination">
-            </ul>
-        </nav>
+        {{ block('pagination') }}
     </div>
 {% endblock %}
 {% block javascripts %}
